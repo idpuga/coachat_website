@@ -6,6 +6,95 @@
     <title>Coachat: Your Coach On Demand</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Changed from center to prevent overlapping content */
+            min-height: 100vh; /* Changed from fixed height to allow flexibility */
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #e3f2ed;
+        }
+        .container {
+            text-align: center;
+            margin-top: 100px; /* Added margin to prevent overlap with the navigation bar */
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        .title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #336b63;
+        }
+        .access-button {
+            background-color: #5ca78a;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .access-button:hover {
+            background-color: #46876c;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #336b63;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 10; /* Added z-index to keep the navigation on top */
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .section {
+            max-width: 800px;
+            margin: 120px 20px; /* Increased margin to avoid overlapping with the fixed nav */
+        }
+        .section h2 {
+            color: #336b63;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .section p, .section ul {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #444;
+        }
+        .section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coachat: Your Coach On Demand</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
         /* General styling for body to set up font, alignment, and background color */
         body {
             display: flex;
@@ -100,8 +189,8 @@
             list-style-type: disc;
             padding-left: 20px;
         }
-        /* Styling for language selection button */
-        .language-select {
+       /* Styling for language selection button */
+       .language-select {
             position: fixed;
             top: 50px; /* Adjusted position to avoid overlap with nav bar */
             right: 20px;
@@ -114,64 +203,64 @@
             z-index: 15; /* Ensures the button is above the nav bar */
         }
     </style>
-    <script>
-        /* Function to change language between English and Spanish */
-        function changeLanguage(lang) {
-            if (lang === 'es') {
-                // Change all relevant text to Spanish
-                document.getElementById('about-text').innerText = "Coachat es un coach virtual a demanda, diseñado para ayudarte a navegar cualquier tipo de problema o mejorar cualquier aspecto de tu vida. Ya sea que busques crecimiento personal o claridad, Coachat está aquí para guiarte con un enfoque de coaching ontológico a través de una simple interfaz de conversación.";
-                document.getElementById('features-title').innerText = "Características principales";
-                document.getElementById('features-list').innerHTML = `
-                    <li>Enfoque de autodesarrollo con coaching personalizado.</li>
-                    <li>Enfoque ontológico centrado en el crecimiento del coachee.</li>
-                    <li>Enviar y recibir mensajes escritos y de audio.</li>
-                    <li>Categorías de objetivos entrenadas para mejoras específicas.</li>
-                    <li>Abordar emociones seleccionadas de manera efectiva con orientación personalizada.</li>
-                `;
-                document.getElementById('use-cases-title').innerText = "Casos de uso";
-                document.getElementById('use-cases-list').innerHTML = `
-                    <li>Decisiones de carrera: Obtén orientación para tomar decisiones profesionales informadas alineadas con tus valores.</li>
-                    <li>Mejora de relaciones: Desarrolla estrategias de comunicación efectivas para mejorar las relaciones personales.</li>
-                    <li>Superación de miedos: Aborda y supera miedos irracionales con técnicas de coaching personalizadas.</li>
-                    <li>Establecimiento de metas: Define metas claras y alcanzables para el desarrollo personal y profesional.</li>
-                    <li>Gestión emocional: Comprende y gestiona emociones complejas de manera efectiva con la ayuda de Coachat.</li>
-                `;
-                document.getElementById('testimonials-title').innerText = "Testimonios";
-                document.getElementById('testimonial-1').innerText = "Ignacio (Surfista Amateur, 33 años): Realmente me ayudó a mejorar mi surfing al proporcionarme una forma concreta de pensar en mis objetivos y establecer una estrategia bien planificada para lograrlos.";
-                document.getElementById('testimonial-2').innerText = "Amelia (Joven Profesional, 31 años): Estaba lidiando con un miedo irracional hacia los pasatiempos de mi esposo, pero Coachat me ayudó a navegarlo, entenderlo y proporcionar una estrategia de comunicación que fue madura y comprensiva para abordarlo con mi pareja. ¡Ahora el miedo se ha ido y mi relación ha mejorado un 100%!";
-                document.querySelector('.title').innerText = "Coachat: Tu Coach A Demanda";
-                document.querySelector('.access-button').innerText = "Accede Aquí";
-                document.querySelector('.language-select').innerText = "EN";
-                document.querySelector('.language-select').setAttribute('onclick', "changeLanguage('en')");
-            } else {
-                // Change all relevant text to English
-                document.getElementById('about-text').innerText = "Coachat is an on-demand virtual coach, designed to help you navigate any type of problem or enhance any aspect of your life. Whether you're looking to achieve personal growth or find clarity, Coachat is here to guide you with an ontological coaching approach through a simple conversation interface.";
-                document.getElementById('features-title').innerText = "Key Features";
-                document.getElementById('features-list').innerHTML = `
-                    <li>Self-development approach with personalized coaching.</li>
-                    <li>Ontological approach focusing on the coachee's growth.</li>
-                    <li>Send and receive both written and audio messages.</li>
-                    <li>Trained categories of goals for targeted improvement.</li>
-                    <li>Address selected emotions effectively with customized guidance.</li>
-                `;
-                document.getElementById('use-cases-title').innerText = "Use Cases";
-                document.getElementById('use-cases-list').innerHTML = `
-                    <li>Career Decisions: Get guidance to make informed career choices aligned with your values.</li>
-                    <li>Relationship Improvement: Develop effective communication strategies to improve personal relationships.</li>
-                    <li>Overcoming Fears: Address and overcome irrational fears with personalized coaching techniques.</li>
-                    <li>Goal Setting: Set clear and actionable goals for personal and professional development.</li>
-                    <li>Emotional Management: Understand and manage complex emotions effectively with the help of Coachat.</li>
-                `;
-                document.getElementById('testimonials-title').innerText = "Testimonials";
-                document.getElementById('testimonial-1').innerText = "Ignacio (Amateur Surfer, 33 years): It really helped me to improve my surfing by providing a concrete way of thinking towards my goals and setting up a well-planned strategy to achieve them.";
-                document.getElementById('testimonial-2').innerText = "Amelia (Young Professional, 31 years): I was dealing with an irrational fear towards my husband's hobbies, but Coachat helped me navigate it, understand it, and effectively provide a communication strategy that was both mature and understanding so I could address it with my partner. Now the fear is gone, and my relationship has improved 100%!";
-                document.querySelector('.title').innerText = "Coachat: Your Coach On Demand";
-                document.querySelector('.access-button').innerText = "Access Here";
-                document.querySelector('.language-select').innerText = "ES";
-                document.querySelector('.language-select').setAttribute('onclick', "changeLanguage('es')");
-            }
+   <script>
+    /* Function to change language between English and Spanish */
+    function changeLanguage(lang) {
+        if (lang === 'es') {
+            // Change all relevant text to Spanish
+            document.getElementById('about-text').innerText = "Coachat es un coach virtual a demanda, diseñado para ayudarte a navegar cualquier tipo de problema o mejorar cualquier aspecto de tu vida. Ya sea que busques crecimiento personal o claridad, Coachat está aquí para guiarte con un enfoque de coaching ontológico a través de una simple interfaz de conversación.";
+            document.getElementById('features-title').innerText = "Características principales";
+            document.getElementById('features-list').innerHTML = `
+                <li>Enfoque de autodesarrollo con coaching personalizado.</li>
+                <li>Enfoque ontológico centrado en el crecimiento del coachee.</li>
+                <li>Enviar y recibir mensajes escritos y de audio.</li>
+                <li>Categorías de objetivos entrenadas para mejoras específicas.</li>
+                <li>Abordar emociones seleccionadas de manera efectiva con orientación personalizada.</li>
+            `;
+            document.getElementById('use-cases-title').innerText = "Casos de uso";
+            document.getElementById('use-cases-list').innerHTML = `
+                <li>Decisiones de carrera: Obtén orientación para tomar decisiones profesionales informadas alineadas con tus valores.</li>
+                <li>Mejora de relaciones: Desarrolla estrategias de comunicación efectivas para mejorar las relaciones personales.</li>
+                <li>Superación de miedos: Aborda y supera miedos irracionales con técnicas de coaching personalizadas.</li>
+                <li>Establecimiento de metas: Define metas claras y alcanzables para el desarrollo personal y profesional.</li>
+                <li>Gestión emocional: Comprende y gestiona emociones complejas de manera efectiva con la ayuda de Coachat.</li>
+            `;
+            document.getElementById('testimonials-title').innerText = "Testimonios";
+            document.getElementById('testimonial-1').innerText = "Ignacio (Surfista Amateur, 33 años): Realmente me ayudó a mejorar mi surfing al proporcionarme una forma concreta de pensar en mis objetivos y establecer una estrategia bien planificada para lograrlos.";
+            document.getElementById('testimonial-2').innerText = "Amelia (Joven Profesional, 31 años): Estaba lidiando con un miedo irracional hacia los pasatiempos de mi esposo, pero Coachat me ayudó a navegarlo, entenderlo y proporcionar una estrategia de comunicación que fue madura y comprensiva para abordarlo con mi pareja. ¡Ahora el miedo se ha ido y mi relación ha mejorado un 100%!";
+            document.querySelector('.title').innerText = "Coachat: Tu Coach A Demanda";
+            document.querySelector('.access-button').innerText = "Accede Aquí";
+            document.querySelector('.language-select').innerText = "EN";
+            document.querySelector('.language-select').setAttribute('onclick', "changeLanguage('en')");
+        } else {
+            // Change all relevant text to English
+            document.getElementById('about-text').innerText = "Coachat is an on-demand virtual coach, designed to help you navigate any type of problem or enhance any aspect of your life. Whether you're looking to achieve personal growth or find clarity, Coachat is here to guide you with an ontological coaching approach through a simple conversation interface.";
+            document.getElementById('features-title').innerText = "Key Features";
+            document.getElementById('features-list').innerHTML = `
+                <li>Self-development approach with personalized coaching.</li>
+                <li>Ontological approach focusing on the coachee's growth.</li>
+                <li>Send and receive both written and audio messages.</li>
+                <li>Trained categories of goals for targeted improvement.</li>
+                <li>Address selected emotions effectively with customized guidance.</li>
+            `;
+            document.getElementById('use-cases-title').innerText = "Use Cases";
+            document.getElementById('use-cases-list').innerHTML = `
+                <li>Career Decisions: Get guidance to make informed career choices aligned with your values.</li>
+                <li>Relationship Improvement: Develop effective communication strategies to improve personal relationships.</li>
+                <li>Overcoming Fears: Address and overcome irrational fears with personalized coaching techniques.</li>
+                <li>Goal Setting: Set clear and actionable goals for personal and professional development.</li>
+                <li>Emotional Management: Understand and manage complex emotions effectively with the help of Coachat.</li>
+            `;
+            document.getElementById('testimonials-title').innerText = "Testimonials";
+            document.getElementById('testimonial-1').innerText = "Ignacio (Amateur Surfer, 33 years): It really helped me to improve my surfing by providing a concrete way of thinking towards my goals and setting up a well-planned strategy to achieve them.";
+            document.getElementById('testimonial-2').innerText = "Amelia (Young Professional, 31 years): I was dealing with an irrational fear towards my husband's hobbies, but Coachat helped me navigate it, understand it, and effectively provide a communication strategy that was both mature and understanding so I could address it with my partner. Now the fear is gone, and my relationship has improved 100%!";
+            document.querySelector('.title').innerText = "Coachat: Your Coach On Demand";
+            document.querySelector('.access-button').innerText = "Access Here";
+            document.querySelector('.language-select').innerText = "ES";
+            document.querySelector('.language-select').setAttribute('onclick', "changeLanguage('es')");
         }
-    </script>
+    }
+</script>
 </head>
 <body>
     <!-- Language selection button to switch between English and Spanish -->
@@ -180,7 +269,58 @@
     <!-- Navigation bar at the top of the page -->
     <nav>
         <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Coachat</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main container with logo and title -->
+    <div class="container" id="home">
+        <img src="ProfilePic.png" alt="Coachat Logo" class="logo">
+        <h1 class="title">Coachat: Your Coach On Demand</h1>
+        <a href="https://t.me/Coachat_bot" class="access-button" target="_blank">Access Here</a>
+    </div>
+
+    <!-- About section -->
+    <div class="section" id="about">
+        <h2>About Coachat</h2>
+        <p id="about-text">Coachat is an on-demand virtual coach, designed to help you navigate any type of problem or enhance any aspect of your life. Whether you're looking to achieve personal growth or find clarity, Coachat is here to guide you with an ontological coaching approach through a simple conversation interface.</p>
+    </div>
+
+    <!-- Features section -->
+    <div class="section" id="features">
+        <h2 id="features-title">Key Features</h2>
+        <ul id="features-list">
+            <li>Self-development approach with personalized coaching.</li>
+            <li>Ontological approach focusing on the coachee's growth.</li>
+            <li>Send and receive both written and audio messages.</li>
+            <li>Trained categories of goals for targeted improvement.</li>
+            <li>Address selected emotions effectively with customized guidance.</li>
+        </ul>
+    </div>
+
+    <!-- Use cases section -->
+    <div class="section" id="use-cases">
+        <h2 id="use-cases-title">Use Cases</h2>
+        <ul id="use-cases-list">
+            <li>Career Decisions: Get guidance to make informed career choices aligned with your values.</li>
+            <li>Relationship Improvement: Develop effective communication strategies to improve personal relationships.</li>
+            <li>Overcoming Fears: Address and overcome irrational fears with personalized coaching techniques.</li>
+            <li>Goal Setting: Set clear and actionable goals for personal and professional development.</li>
+            <li>Emotional Management: Understand and manage complex emotions effectively with the help of Coachat.</li>
+        </ul>
+    </div>
+
+    <!-- Testimonials section -->
+    <div class="section" id="testimonials">
+        <h2 id="testimonials-title">Testimonials</h2>
+        <p id="testimonial-1">"Ignacio (Amateur Surfer, 33 years): It really helped me to improve my surfing by providing a concrete way of thinking towards my goals and setting up a well-planned strategy to achieve them."</p>
+        <p id="testimonial-2">"Amelia (Young Professional, 31 years): I was dealing with an irrational fear towards my husband's hobbies, but Coachat helped me navigate it, understand it, and effectively provide a communication strategy that was both mature and understanding so I could address it with my partner. Now the fear is gone, and my relationship has improved 100%!"</p>
+    </div>
+</body>
+</html>
+
            
-
-
 
