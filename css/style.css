@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+body{
+	  font-family: "Roboto", sans-serif;
+  font-weight: 300 !important;
+  background-color: #FFFDF3;
+}
+h1,h2,h3,h4,h5,h6{
+    text-transform: capitalize; 
+}
+:root {
+  --my-custom-color:#183F47;
+  }
+  .customer-color{
+  color: var(--my-custom-color);
+  font-family: "Rowdies", sans-serif;
+  }
+nav{
+  background-color: #FFFDF3;
+}
+ .navbar-nav .active>.nav-link{
+	font-weight: 700;
+}
+
+.navbar-nav .nav-item .nav-link{
+  color: black;
+  font-weight: 500;
+    font-size: 15px;
+}
+
+  
+  .nav-bar-icon {
+    width: 200px;
+  }
+  .nav-menu-btn{
+    width: 60px;
+  }
+.btn-primary{
+  background-color: #3E825E !important;
+  border-color:#3E825E !important ;
+  border-radius: 20px;
+}
+.btn-primary:hover{
+  background-color: #3E825E !important;
+  border-color:#3E825E !important ;
+  border-radius: 20px;
+}
+.btn-outline-primary{
+  border-radius: 20px;
+  color: #3E825E !important;
+  border-color:#3E825E !important ;
+}
+.btn-outline-primary:hover{
+  background-color: #3E825E !important;
+  color: white !important;
+}
+/* navbar End */
+@media(min-width:800px){
+
+.home-banner-section h2{
+font-size: 53px;
+}
+.home-banner-section h2{
+  margin-top: 60px;
+}
+.home-banner-section p,a{
+  margin-top: 20px;
+}
+.home-second-section p{
+font-size: 20px;
+font-weight: 400;
+line-height: 28.13px;
+}
+}
+@media(max-width:800px){
+
+.home-banner-section{
+text-align: center;
+}
+.home-third-section a,h2{
+  text-align: center;
+}
+}
+
+
+.home-second-section {
+border-top: 1px solid var(--my-custom-color);
+border-bottom: 1px solid var(--my-custom-color);
+}
+
+.home-third-section p{
+font-size: 18px;
+font-weight: 400;
+}
+
+  .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #333; /* Dark text color */
+    }
+    .feature-icon {
+      font-size: 20px;
+      color: #666; /* Subtle icon color */
+      margin-right: 10px;
+    }
+    .home-fourth-section{
+      background-color: #3E825E;
+      color: white;
+    }
+
+        .accordion-button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      box-shadow: none;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+    }
+    .accordion-button.collapsed {
+      color: white;
+    }
+    .accordion-item {
+      border: none;
+    }
+   .accordion-button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      box-shadow: none;
+    }
+    .accordion-button:focus {
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .accordion-button.collapsed {
+      color: white;
+    }
+    .accordion-item {
+      border: none;
+    }
+    .accordion-button .arrow-icon {
+      position: absolute;
+      right: 0px;
+      font-size: 1.2rem;
+    }
+    .accordion-button{
+      padding: 0px;
+      font-size: 20px;
+      text-align: left !important;
+    }
+    .home-fourth-section .btn-outline-primary{
+      color: white !important;
+      border-color: white !important;
+    }
+
+.home-second-last-section{
+border: 1px solid var(--my-custom-color);
+border-radius: 15px;
+padding: 10px;
+}
+.home-second-last-section span{
+  color: gray;
+  font-size: 12px;
+}
+.home-second-last-section p{
+  font-size: 12px;
+}
+.home-second-last-section h3{
+  font-size: 20px;
+
+  padding: 0px;
+  margin: 0px;
+}
