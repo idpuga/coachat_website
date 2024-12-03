@@ -1,415 +1,459 @@
+<!-- index.html -->
+
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <!-- Meta tags requeridos -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS y otros enlaces -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuente Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Tu hoja de estilos -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Iconos -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/Coachat_logo.png">
+
     <title>Coachat - Home Page</title>
   </head>
   <body>
-   <nav class="navbar container-fluid navbar-expand-lg ">
-    <!-- Navbar brand -->
-    <a class="navbar-brand ml-md-3" href="index.html">
+    <!-- Navbar -->
+    <nav class="navbar container-fluid navbar-expand-lg ">
+      <!-- Logo -->
+      <a class="navbar-brand ml-md-3" href="index.html">
         <img src="img/logo.png" class="nav-bar-icon logo-img logo-wide img-fluid">
-    </a>
+      </a>
 
-    <!-- Collapse button -->
-    <img src="img/menu.png" class="navbar-toggler nav-menu-btn" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"> 
-        <!-- 
-    <img src="img/lang.png" class="navbar-toggler nav-menu-btn" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">  -->
+      <!-- Botón de colapso -->
+      <img src="img/menu.png" class="navbar-toggler nav-menu-btn" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"> 
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="basicExampleNav">
-
-        <!-- Links -->
+      <!-- Contenido colapsable -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+        <!-- Enlaces -->
         <ul class="navbar-nav m-auto">
-            <li class="nav-item active"><a class="nav-link m-2" href="index.html">Home</a></li>
-            <li class="nav-item active"><a class="nav-link m-2" href="#">About Us</a></li>
-            <li class="nav-item active"><a class="nav-link m-2" href="#">Features</a></li>
-            <li class="nav-item active"><a class="nav-link m-2" href="#">Use</a></li>
-
-                    </ul>
+          <li class="nav-item active"><a class="nav-link m-2" href="index.html" data-key="home">Home</a></li>
+          <li class="nav-item active"><a class="nav-link m-2" href="#about-us" data-key="aboutUs">About Us</a></li>
+          <li class="nav-item active"><a class="nav-link m-2" href="#features" data-key="features">Features</a></li>
+          <li class="nav-item active"><a class="nav-link m-2" href="#use" data-key="use">Use</a></li>
+        </ul>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a class="nav-link m-2" href="#">
-<div class="container">
-            <div class="language-selector d-flex align-items-center">
-                <i class="fa fa-globe  pr-2" style="font-size:18px;"></i>
-                <span>EN</span>
-                <i class="fa fa-chevron-down   pl-2" style="font-size:18px;"></i>
+          <li class="nav-item active">
+            <a class="nav-link m-2" href="#" id="language-selector">
+              <div class="container">
+                <div class="language-selector d-flex align-items-center">
+                  <i class="fa fa-globe pr-2" style="font-size:18px;"></i>
+                  <span id="lang-text">EN</span>
+                  <i class="fa fa-chevron-down pl-2" style="font-size:18px;"></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Carrusel -->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="container home-banner-section">
+            <div class="row">
+              <div class="col-md-6">
+                <br><br><br><br>
+                <h2 class="customer-color" data-key="coachatTitle">Coachat - your coach <br> on demand</h2>
+                <p data-key="coachatSubtitle" style="font-size:30px;">AI conversations to inspire real change</p>
+                <a class="btn btn-primary " href="https://t.me/Coachat_bot" target="_blank" data-key="tryForFree">Try beta for free!</a>
+              </div>
+              <div class="col-md-6">
+                <img src="img/photo_promotion.png" class="img-fluid">
+              </div>
             </div>
+          </div>
         </div>
-            </a></li>
-
-                    </ul>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="container home-banner-section">
+            <div class="row">
+              <div class="col-md-6">
+                <br><br><br><br>
+                <h2 class="customer-color" data-key="coachatTitle2">Coachat - Technology<br> at your service</h2>
+                <p data-key="coachatSubtitle2" style="font-size:30px;">Your journey, your coach, your growth.</p>
+                <a class="btn btn-primary " href="https://t.me/Coachat_bot" target="_blank" data-key="tryForFree">Try beta for free!</a>
+              </div>
+              <div class="col-md-6">
+                <img src="img/photo_promotion2.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="container home-banner-section">
+            <div class="row">
+              <div class="col-md-6">
+                <br><br><br><br>
+                <h2 class="customer-color" data-key="coachatTitle3">Coachat - Personal development <br> for Everyone</h2>
+                <p data-key="coachatSubtitle3" style="font-size:30px;">Empowering your path to self-discovery</p>
+                <a class="btn btn-primary " href="https://t.me/Coachat_bot" target="_blank" data-key="tryForFree">Try beta for free!</a>
+              </div>
+              <div class="col-md-6">
+                <img src="img/photo_promotion3.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controles del carrusel -->
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
 
-
-</nav>
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="container home-banner-section">
-    <div class="row">
-        <div class="col-md-6">
-            <br><br><br><br>
-            <h2 class="customer-color">Coachat - your coach <br>
-on demand</h2>
-<p>AI conversations to inspire real change</p>
-<a class="btn btn-primary " href="https://t.me/Coachat_bot" target="_blank">Try beta for free!</a>
-        </div>
-        <div class="col-md-6">
-            <img src="img/photo_promotion.png" class="img-fluid">
-        </div>
-    </div>
-</div>
-
-
-    </div>
-    <div class="carousel-item">
-     <div class="container home-banner-section">
-    <div class="row">
-        <div class="col-md-6">
-            <br><br><br><br>
-            <h2 class="customer-color">Coachat - Technology<br>
-at your service</h2>
-<p>Your journey, your coach, your growth.</p>
-<a class="btn btn-primary " href="https://t.me/Coachat_bot" target="_blank">Try beta for free!</a>
-        </div>
-        <div class="col-md-6">
-            <img src="img/photo_promotion2.png" class="img-fluid">
-        </div>
-    </div>
-</div>
-
-
-
-    </div>
-    <div class="carousel-item">
-     <div class="container home-banner-section">
-    <div class="row">
-        <div class="col-md-6">
-            <br><br><br><br>
-            <h2 class="customer-color">Coachat - Personal development <br>
-for Everyone</h2>
-<p>Empowering your path to self-discovery</p>
-<a class="btn btn-primary " href="https://t.me/Coachat_bot" target="_blank">Try beta for free! </a>
-        </div>
-        <div class="col-md-6">
-            <img src="img/photo_promotion3.png" class="img-fluid">
-        </div>
-    </div>
-</div>
-
-
-
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-
-<div class="home-second-section">
-    <div class="container text-center">
+    <!-- Sección "About Us" -->
+    <div id="about-us" class="home-second-section">
+      <div class="container text-center">
         <br><br>
-        <h3 class="customer-color">About Coachat</h3>
-        <p>Coachat is an on-demand virtual coach, designed to help you navigate any type of challenge or enhance any aspect of your life. Whether you're looking to achieve personal growth or find clarity, Coachat is here to guide you with an onthological coaching approach through a simple conversation interface.</p>
+        <h3 class="customer-color" data-key="aboutCoachat">About Coachat</h3>
+        <p data-key="aboutCoachatDescription">
+          Coachat is an on-demand virtual coach, designed to help you navigate any type of challenge or enhance any aspect of your life. Whether you're looking to achieve personal growth or find clarity, Coachat is here to guide you with an ontological coaching approach through a simple conversation interface.
+        </p>
         <br><br>
+      </div>
     </div>
-</div>
-<div class="home-third-section">
-    <div class="container">
+
+    <!-- Sección "Features" -->
+    <div id="features" class="home-third-section">
+      <div class="container">
         <div class="row">
-            <div class="col-md-6  order-md-2">
-                <br><br>
-                <br><br>
-                <br><br>
-                <h2 class="customer-color">Key Features</h2>
-                <br><br>
-                 <div class="col-12">
-        <!-- Feature 1 -->
-        <div class="feature-item">
-          <i class="bi bi-person feature-icon"></i>
-          <span>Self-development approach with personalized coaching.</span>
-        </div>
-        <!-- Feature 2 -->
-        <div class="feature-item">
-          <i class="bi bi-graph-up-arrow feature-icon"></i>
-          <span>Ontological approach focusing on the coachee's growth.</span>
-        </div>
-        <!-- Feature 3 -->
-        <div class="feature-item">
-          <i class="bi bi-mic feature-icon"></i>
-          <span>Send and receive both written and audio messages.</span>
-        </div>
-        <!-- Feature 4 -->
-        <div class="feature-item">
-          <i class="bi bi-list-task feature-icon"></i>
-          <span>Trained categories of goals for targeted improvement.</span>
-        </div>
-        <!-- Feature 5 -->
-        <div class="feature-item">
-          <i class="bi bi-emoji-smile feature-icon"></i>
-          <span>Address selected emotions effectively with customized guidance.</span>
+          <div class="col-md-6 order-md-2">
+            <br><br>
+            <br><br>
+            <br><br>
+            <h2 class="customer-color" data-key="keyFeatures">Key Features</h2>
+            <br><br>
+            <div class="col-12">
+              <!-- Característica 1 -->
+              <div class="feature-item">
+                <i class="bi bi-person feature-icon"></i>
+                <span data-key="selfDevelopment">Self-development approach with personalized coaching.</span>
+              </div>
+              <!-- Característica 2 -->
+              <div class="feature-item">
+                <i class="bi bi-graph-up-arrow feature-icon"></i>
+                <span data-key="ontologicalApproach">Ontological approach focusing on the coachee's growth.</span>
+              </div>
+              <!-- Característica 3 -->
+              <div class="feature-item">
+                <i class="bi bi-mic feature-icon"></i>
+                <span data-key="audioMessages">Send and receive both written and audio messages.</span>
+              </div>
+              <!-- Característica 4 -->
+              <div class="feature-item">
+                <i class="bi bi-list-task feature-icon"></i>
+                <span data-key="goalCategories">Trained categories of goals for targeted improvement.</span>
+              </div>
+              <!-- Característica 5 -->
+              <div class="feature-item">
+                <i class="bi bi-emoji-smile feature-icon"></i>
+                <span data-key="emotionalGuidance">Address selected emotions effectively with customized guidance.</span>
+              </div>
+            </div>
+            <a class="btn btn-outline-primary" href="https://t.me/Coachat_bot" target="_blank" data-key="tryForFree">Try beta for free!</a>
+          </div>
+          <div class="col-md-6 order-md-1">
+            <br><br>
+            <img src="img/photo_features.png" class="img-fluid">
+          </div>
         </div>
       </div>
-<a class="btn btn-outline-primary" href="https://t.me/Coachat_bot" target="_blank">Try beta for free!</a>
-            </div>
-            <div class="col-md-6  order-md-1">
-            
-            <br><br>
-                
-            <img src="img/photo_features.png" class="img-fluid">
-            </div>
-        </div>
     </div>
-</div>
-<div class=" home-fourth-section">
-    <div class="container">
-        
+
+    <!-- Sección "Use Cases" -->
+    <div id="use" class="home-fourth-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <br><br>
+            <h2 data-key="howToUse">How can you use it</h2>
+            <div class="accordion" id="faqAccordion">
+              <!-- Caso de Uso 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span data-key="careerDecisions">Career Decisions</span>
+                    <i class="bi bi-chevron-up arrow-icon"></i>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" data-key="careerDecisionsDescription">
+                    Get guidance to make informed career choices aligned with your values.
+                  </div>
+                </div>
+              </div>
+              <!-- Caso de Uso 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header collapsed" id="headingTwo">
+                  <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <span data-key="relationshipImprovement">Relationship Improvement</span>
+                    <i class="bi bi-chevron-down arrow-icon"></i>
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" data-key="relationshipImprovementDescription">
+                    Enhance your relationships with effective communication and understanding.
+                  </div>
+                </div>
+              </div>
+              <!-- Caso de Uso 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header collapsed" id="headingThree">
+                  <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <span data-key="overcomingFears">Overcoming Fears</span>
+                    <i class="bi bi-chevron-down arrow-icon"></i>
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" data-key="overcomingFearsDescription">
+                    Learn strategies to overcome fears and build confidence in challenging situations.
+                  </div>
+                </div>
+              </div>
+              <!-- Caso de Uso 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header collapsed" id="headingFour">
+                  <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <span data-key="goalSetting">Goal Setting</span>
+                    <i class="bi bi-chevron-down arrow-icon"></i>
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" data-key="goalSettingDescription">
+                    Define and achieve your goals with a clear and actionable plan.
+                  </div>
+                </div>
+              </div>
+              <!-- Caso de Uso 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header collapsed" id="headingFive">
+                  <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <span data-key="emotionalManagement">Emotional Management</span>
+                    <i class="bi bi-chevron-down arrow-icon"></i>
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" data-key="emotionalManagementDescription">
+                    Address and manage emotions effectively for personal and professional growth.
+                  </div>
+                </div>
+              </div>
+              <!-- Caso de Uso 6 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header collapsed" id="headingSix">
+                  <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <span data-key="more">More!</span>
+                    <i class="bi bi-chevron-down arrow-icon"></i>
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" data-key="moreDescription">
+                    Any type of challenge, your own personal improvement or getting to know yourself better. Discover what are you truly capable of!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center text-md-left">
+              <a class="btn btn-outline-primary border-light text-white" href="https://t.me/Coachat_bot" target="_blank" data-key="tryForFree">Try it for free!</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="img/photo_use.png" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección "Access" -->
+    <div class="home-second-section">
+      <div class="container text-center">
+        <br><br>
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="customer-color" data-key="confidentiality">100% <br>confidentiality</h2>
+          </div>
+          <div class="col-md-4">
+            <h2 class="customer-color" data-key="anywhere">Anywhere <br> in the world</h2>
+          </div>
+          <div class="col-md-4">
+            <h2 class="customer-color" data-key="access">24/7 <br> access</h2>
+          </div>
+        </div>
+        <br><br>
+      </div>
+    </div>
+
+<!-- Sección "Artículo" -->
+<div class="home-second-section">
+  <br>
+  <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <br><br>
-            <h2>how can you use it</h2>
-    <div class="accordion" id="faqAccordion">
-      <!-- FAQ 1 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header " id="headingOne">
-          <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Career Decisions
-            <i class="bi bi-chevron-up arrow-icon"></i>
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Get guidance to make informed career choices aligned with your values.
-          </div>
-        </div>
-      </div>
-      <!-- FAQ 2 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header collapsed" id="headingTwo">
-          <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Relationship Improvement
-            <i class="bi bi-chevron-down arrow-icon"></i>
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Enhance your relationships with effective communication and understanding.
-          </div>
-        </div>
-      </div>
-      <!-- FAQ 3 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header collapsed" id="headingThree">
-          <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Overcoming Fears
-            <i class="bi bi-chevron-down arrow-icon"></i>
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Learn strategies to overcome fears and build confidence in challenging situations.
-          </div>
-        </div>
-      </div>
-      <!-- FAQ 4 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header collapsed" id="headingFour">
-          <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            Goal Setting
-            <i class="bi bi-chevron-down arrow-icon"></i>
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Define and achieve your goals with a clear and actionable plan.
-          </div>
-        </div>
-      </div>
-      <!-- FAQ 5 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header collapsed" id="headingFive">
-          <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            Emotional Management
-            <i class="bi bi-chevron-down arrow-icon"></i>
-          </button>
-        </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Address and manage emotions effectively for personal and professional growth.
-          </div>
-        </div>
-      </div>
-    </div>
-    
-     <!-- FAQ 6 -->
-    <div class="accordion-item">
-      <h2 class="accordion-header collapsed" id="headingSix">
-        <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-          More!
-          <i class="bi bi-chevron-down arrow-icon"></i>
-        </button>
-      </h2>
-      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-           Any type of challenge, your own personal improvement or getting to know yourself better. Discover what are you truly capable of!
-        </div>
-       </div>
-    </div>
-
-   <div class="text-center text-md-left">
-        
-<a class="btn btn-outline-primary border-light text-white" href="https://t.me/Coachat_bot" target="_blank">Try it for free!</a>
-    </div>
+      <br>
+      <img src="img/photo_article.png" class="img-fluid">
         </div>
         <div class="col-md-6">
-            <img src="img/photo_use.png" class="img-fluid">
-      
-        </div>
-    </div>
-    </div>
-</div>
-
-
-
-<div class="home-second-section">
-    <div class="container text-center">
-      <div class="row">
-          <div class="col-md-4">
-        <br><br>
-              <h2 class="customer-color">100 % <br>confidentiality</h2>
-          </div>
-          <div class="col-md-4">
-        <br><br>
-              <h2 class="customer-color">anywhere <br>
-in the world</h2>
-          </div>
-          <div class="col-md-4">
-        <br><br>
-              <h2 class="customer-color">24/7 <br>
-access</h2>
-          </div>
-      </div>
-        <br><br>
-    </div>
-</div>
-
-<div class="home-second-section">
-    <br>
-    <div class="container">
-      <div class="row">
-          <div class="col-md-6">
-        <br>
-        <img src="img/photo_article.png" class="img-fluid">
-          </div>
-          <div class="col-md-6">
-        <br><br>
-              <h3>how to use artificial <br>
+      <br><br>
+            <h3 data-key="articleTitle">how to use artificial <br>
 intelligence (AI) ?</h3>
-<p>
+<p data-key="articleContent">
 You don’t need to be a programmer to use AI. Modern services are easy to use, and many of them have free versions.
 <br><br>
-Artificial intelligence is not just about the future, but about convenience today. It can become your assistant in many aspects of life, helping to save time and effort...</p>
-          </div>
-      </div>
-        <br><br>
-    </div>
-</div>
-
-
-<div class="">
-    <br><br>
-    <h2 class="customer-color text-center">reviews</h2>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <br>
-                <div class="home-second-last-section">
-                <div class="d-flex justify-content-start">
-                    <div class="col-3">
-                        <img src="img/avatar_01.png" class="img-fluid">
-                    </div>
-                    <div>
-                        <h3><b>Thomas</b></h3>
-                        <span>Just became a Father, 35 years</span>
-                        <p>"There is so much uncertainty and insecurity when you hold your firstborn. But also so much love. Coachat helped me to reassure my selfconfidence as a father figure."</p>
-                    </div>
-                </div>    
-                </div>
-            </div>
-            <div class="col-md-4">
-                <br>
-                <div class="home-second-last-section">
-                <div class="d-flex justify-content-start">
-                    <div class="col-3">
-                        <img src="img/avatar_02.png" class="img-fluid">
-                    </div>
-                    <div>
-                        <h3><b>Amelia</b></h3>
-                        <span>Young Professional, 31 years</span>
-                        <p>"I was dealing with an irrational fear towards my husband's hobbies, but Coachat helped me navigate it, understand it, and effectively provide a communication strategy that was both mature and understanding so I could address it with my partner. Now the fear is gone, and my relationship has improved 100%!"</p>
-                    </div>
-                </div>    
-                </div>
-            </div>
-            <div class="col-md-4">
-                <br>
-                <div class="home-second-last-section">
-                <div class="d-flex justify-content-start">
-                    <div class="col-3">
-                        <img src="img/avatar_03.png" class="img-fluid">
-                    </div>
-                    <div>
-                        <h3><b>Ignacio</b></h3>
-                        <span>Amateur Surfer, 33 years</span>
-                        <p>It really helped me to improve my surfing by providing a concrete way of thinking towards my goals within the sport and setting up a well-planned mental strategy to achieve them."</p>
-                    </div>
-                </div>    
-                </div>
-            </div>
+Artificial intelligence is not just about the future, but about convenience today. It can become your assistant in many aspects of life, helping to save time and effort...
+</p>
         </div>
     </div>
-    <br><br>
+      <br><br>
+  </div>
 </div>
-<div style="background: #3E825E;">
-    <br>
-    <h3 class="customer-color text-white container">2024
-coachat</h3>
-    <br>
-</div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-     <script>
-    document.querySelectorAll('.accordion-button').forEach(button => {
-      button.addEventListener('click', function () {
-        const icon = this.querySelector('.arrow-icon');
-        icon.classList.toggle('bi-chevron-up');
-        icon.classList.toggle('bi-chevron-down');
+
+
+    <!-- Sección "Reviews" -->
+    <div class="">
+      <br><br>
+      <h2 class="customer-color text-center" data-key="reviews">Reviews</h2>
+      <div class="container">
+        <div class="row">
+          <!-- Reseña 1 -->
+          <div class="col-md-4">
+            <br>
+            <div class="home-second-last-section">
+              <div class="d-flex justify-content-start">
+                <div class="col-3">
+                  <img src="img/avatar_01.png" class="img-fluid">
+                </div>
+                <div>
+                  <h3><b>Thomas</b></h3>
+                  <span>Just became a Father, 35 years</span>
+                  <p data-key="thomasReview">
+                    "There is so much uncertainty and insecurity when you hold your firstborn. But also so much love. Coachat helped me to reassure my self-confidence as a father figure."
+                  </p>
+                </div>
+              </div>    
+            </div>
+          </div>
+          <!-- Reseña 2 -->
+          <div class="col-md-4">
+            <br>
+            <div class="home-second-last-section">
+              <div class="d-flex justify-content-start">
+                <div class="col-3">
+                  <img src="img/avatar_02.png" class="img-fluid">
+                </div>
+                <div>
+                  <h3><b>Amelia</b></h3>
+                  <span>Young Professional, 31 years</span>
+                  <p data-key="ameliaReview">
+                    "I was dealing with an irrational fear towards my husband's hobbies, but Coachat helped me navigate it, understand it, and effectively provide a communication strategy that was both mature and understanding so I could address it with my partner. Now the fear is gone, and my relationship has improved 100%!"
+                  </p>
+                </div>
+              </div>    
+            </div>
+          </div>
+          <!-- Reseña 3 -->
+          <div class="col-md-4">
+            <br>
+            <div class="home-second-last-section">
+              <div class="d-flex justify-content-start">
+                <div class="col-3">
+                  <img src="img/avatar_03.png" class="img-fluid">
+                </div>
+                <div>
+                  <h3><b>Ignacio</b></h3>
+                  <span>Amateur Surfer, 33 years</span>
+                  <p data-key="ignacioReview">
+                    "It really helped me to improve my surfing by providing a concrete way of thinking towards my goals within the sport and setting up a well-planned mental strategy to achieve them."
+                  </p>
+                </div>
+              </div>    
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </div>
+
+    <!-- Footer -->
+    <div style="background: #3E825E;">
+      <br>
+      <h3 class="customer-color text-white container">2024 coachat</h3>
+      <br>
+    </div>
+
+    <!-- Scripts -->
+    <!-- jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script>
+      document.querySelectorAll('.accordion-button').forEach(button => {
+        button.addEventListener('click', function () {
+          const icon = this.querySelector('.arrow-icon');
+          icon.classList.toggle('bi-chevron-up');
+          icon.classList.toggle('bi-chevron-down');
+        });
       });
-    });
-  </script>
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <!-- Incluye el archivo de traducciones -->
+    <script src="translations.js"></script>
+
+    <!-- Script para manejar la traducción -->
+    <script>
+      let currentLanguage = 'en'; // Idioma inicial
+
+      function translatePage() {
+        const elements = document.querySelectorAll('[data-key]');
+        elements.forEach(element => {
+          const key = element.getAttribute('data-key');
+          const translation = translations[currentLanguage][key];
+          if (translation) {
+            element.innerHTML = translation;
+          }
+        });
+        // Actualizar el texto del selector de idioma
+        const langText = document.getElementById('lang-text');
+        if (langText) {
+          langText.innerText = currentLanguage.toUpperCase();
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        translatePage();
+      });
+
+      // Cambiar el idioma al hacer clic en el selector
+      const langSelector = document.getElementById('language-selector');
+      if (langSelector) {
+        langSelector.addEventListener('click', function(e) {
+          e.preventDefault();
+          currentLanguage = (currentLanguage === 'en') ? 'es' : 'en';
+          translatePage();
+        });
+      }
+    </script>
   </body>
 </html>
